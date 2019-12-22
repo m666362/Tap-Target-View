@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="favorite"
+        android:icon="@drawable/dots_vertical"
+        app:showAsAction="ifRoom"
+        android:id="@+id/dotIconxml">
+    </item>
+    <item
+        android:title="favorite"
+        android:icon="@drawable/ic_magnify_white_24dp"
+        app:showAsAction="ifRoom"
+        android:id="@+id/shareiconxml">
+    </item>
+    <item
+        android:title="favorite"
+        android:icon="@drawable/ic_dots_vertical_white_24dp"
+        app:showAsAction="ifRoom"
+        android:id="@+id/seariconxml">
+    </item>
+
+</menu>
