@@ -63,14 +63,13 @@ public class MainActivity extends AppCompatActivity implements CurrentSessionCal
             SharedPreferences.Editor editor = setting.edit();
             editor.putBoolean( "first_time_start", true );
 
+            TapTargetView.showFor(this,
+                    TapTarget.forView(findViewById(R.id.dotmainxml),
+                            "This is a target", "We have the best targets, believe me")
+                            .tintTarget( false )
+                            .targetCircleColor( R.color.md_blue_grey_500_25 ));
 
         }
-
-        TapTargetView.showFor(this,
-                TapTarget.forView(findViewById(R.id.dotmainxml),
-                        "This is a target", "We have the best targets, believe me")
-        .tintTarget( false )
-        .targetCircleColor( R.color.md_blue_grey_500_25 ));
 
         initObject();
         initForSetOnClick();
