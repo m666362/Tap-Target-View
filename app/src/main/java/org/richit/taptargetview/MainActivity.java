@@ -28,8 +28,7 @@ public class MainActivity extends AppCompatActivity implements CurrentSessionCal
     public Button mStopButton;
     public AudioStreamingManager streamingManager;
     public MediaMetaData mMediaMetaData;
-    public int flag = 1;
-    public boolean firstStart;
+    public boolean firstStart ;
 
     public void initObject(){
 
@@ -55,21 +54,20 @@ public class MainActivity extends AppCompatActivity implements CurrentSessionCal
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
 
-        SharedPreferences setting = getSharedPreferences( "PREFS", 0 );
-        firstStart = setting.getBoolean( "first_time_start", false );
+        SharedPreferences sharePreference = getSharedPreferences( "PREFS", 0 );
+        firstStart = sharePreference.getBoolean( "first_time_start", true );
 
         if(firstStart){
 
-            SharedPreferences.Editor editor = setting.edit();
-            editor.putBoolean( "first_time_start", true );
-
+            SharedPreferences.Editor editor = sharePreference.edit();
+            editor.putBoolean( "first_time_start", false ).apply();
             TapTargetView.showFor(this,
                     TapTarget.forView(findViewById(R.id.dotmainxml),
                             "This is a target", "We have the best targets, believe me")
                             .tintTarget( false )
                             .targetCircleColor( R.color.md_blue_grey_500_25 ));
-
         }
+
 
         initObject();
         initForSetOnClick();
