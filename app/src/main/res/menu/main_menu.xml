@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:title="favorite"
+        android:id="@+id/dotmenuxml"
         android:icon="@drawable/dots_vertical"
-        app:showAsAction="ifRoom"
-        android:id="@+id/dotIconxml">
-    </item>
-    <item
+        android:orderInCategory="0"
         android:title="favorite"
+        app:showAsAction="ifRoom"></item>
+    <item
+        android:id="@+id/sharemenuxml"
         android:icon="@drawable/ic_magnify_white_24dp"
-        app:showAsAction="ifRoom"
-        android:id="@+id/shareiconxml">
-    </item>
-    <item
+        android:orderInCategory="1"
         android:title="favorite"
+        app:showAsAction="ifRoom"></item>
+    <item
+        android:id="@+id/seachmenuxml"
         android:icon="@drawable/ic_dots_vertical_white_24dp"
-        app:showAsAction="ifRoom"
-        android:id="@+id/seariconxml">
-    </item>
+        android:orderInCategory="2"
+        android:title="favorite"
+        app:showAsAction="ifRoom"></item>
 
 </menu>
